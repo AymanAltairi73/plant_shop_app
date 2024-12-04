@@ -1,28 +1,23 @@
-لتعديل ملف `README.md` الخاص بك بحيث يعكس معلومات حول عرض واجهات التطبيق بحجم عرض الجوال، يمكنك تحديثه بالشكل التالي:
-
----
-
-```markdown
 # Plant Shop App
 
-A modern and user-friendly Flutter application designed for plant shopping.
+A modern and user-friendly Flutter application for plant shopping.
 
 ## Features
 
-- **Mobile-Optimized Interface:** The app's UI is specifically designed to fit and function smoothly on mobile screens of various sizes.
-- **Responsive Design:** Ensures compatibility with different device orientations (portrait and landscape).
-- **Dynamic Components:** Interactive widgets enhance user experience.
+- **Mobile-Optimized Interface:** Tailored for mobile screens with a responsive layout.
+- **Interactive Dsign:** Includes dynamic components for a seamless user experience.
+- **Lightweight and Fast:** Optimized for performance on various devices.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application. Below are the steps to run the app with a mobile-optimized interface.
+Follow the steps below to run the app locally on your machine.
 
 ### Prerequisites
 
-- Install Flutter SDK ([Installation Guide](https://docs.flutter.dev/get-started/install))
-- A compatible IDE like [Android Studio](https://developer.android.com/studio) or [VS Code](https://code.visualstudio.com/).
+- Install the [Flutter SDK](https://docs.flutter.dev/get-started/install)
+- Use an IDE like [Android Studio](https://developer.android.com/studio) or [Visual Studio Code](https://code.visualstudio.com/).
 
-### Running the App
+### Installation
 
 1. Clone the repository:
    ```bash
@@ -32,32 +27,60 @@ This project is a starting point for a Flutter application. Below are the steps 
    ```bash
    cd plant_shop_app
    ```
-3. Run the app:
+3. Fetch the dependencies:
+   ```bash
+   flutter pub get
+   ```
+
+### Running the App
+
+1. Connect a physical device or start a mobile emulator.
+2. Run the app with:
    ```bash
    flutter run
    ```
-   Ensure a mobile emulator or a physical device is connected.
 
 ## Screenshots
+## Screenshots
 
-| Portrait Mode | Landscape Mode |
-|---------------|----------------|
-| ![Portrait](screenshots/portrait.png) | ![Landscape](screenshots/landscape.png) |
+### Home and Navigation
+| ![Home Screen](https://github.com/user-attachments/assets/b5793e35-4ee3-49e7-8b29-06942233d8be) | ![Navigation Drawer](https://github.com/user-attachments/assets/84f7b97e-6c08-46c4-a19b-6488388982fb) |
+|:-------------------------------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------------------:|
+| Intro Shop App(1)                                                                                     |Intro Shop App(2)                                                                                   |
+
+### Product Views
+| ![Product List](https://github.com/user-attachments/assets/63758f87-7460-47bd-a3ad-d7bb38de11dd) | ![Product Details](https://github.com/user-attachments/assets/53b3ea9f-de08-41d1-9ecd-bc97ed59b7ce) |
+|:------------------------------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------------------:|
+| Intro Shop App(3)                                                                                    | signIn Page                                                                                     |
+
+### Cart and Checkout
+| ![Cart View](https://github.com/user-attachments/assets/f31ca81c-75fe-4c03-bebb-ae2be6a50a95) | ![Checkout Screen](https://github.com/user-attachments/assets/4bc6528e-17a0-4166-afdb-870b184e1b3e) |
+|:---------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------------------:|
+| SignUp Page                                                                                          | HomePage                                                                                           |
+
+### User Profile and Settings
+| ![Profile Screen](https://github.com/user-attachments/assets/7ec62562-ff56-4fdb-ade9-caabff018587) | ![Settings Screen](https://github.com/user-attachments/assets/bd21cfc5-54bd-480d-bf02-63d1b0e26c5c) |
+|:--------------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------------------:|
+| Favorite page                                                                                   | Scan Plant Page                                                                                     |
+
+### Additional Screens
+| ![Order History](https://github.com/user-attachments/assets/88f8bf3b-ed1d-4ccc-b7b4-f63503393abf) | | ![Search Results](https://github.com/user-attachments/assets/b4da9c2b-2545-475e-ab0f-5720cc7ac0d6) |
+|:--------------------------------------------------------------------------------------------------:|  |:-------------------------------------------------------------------------------------------------:|
+
+| Payment Page                                                                                   |      | Profile Page                                                                                  |
+
+
+
 
 ## Resources
 
-A few resources to help you get started with Flutter development:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For comprehensive Flutter documentation, view the [online documentation](https://docs.flutter.dev/), which offers tutorials, samples, guidance on mobile development, and a full API reference.
+- [Flutter Installation Guide](https://docs.flutter.dev/get-started/install)
+- [Lab: Build Your First Flutter App](https://docs.flutter.dev/get-started/codelab)
+- [Flutter Cookbook](https://docs.flutter.dev/cookbook)
 
 ---
 
-### تحسينات مضافة:
-1. **وصف المزايا:** ذكر أن التطبيق متجاوب ومخصص لشاشات الجوال.
-2. **إضافة تعليمات تشغيل واضحة.**
-3. **عرض الصور التوضيحية:** إضافة لقطات للشاشة لتوضيح التصميم. 
+### Notes
 
-قم بتخصيص النصوص والصور حسب مشروعك الفعلي. إذا كنت تحتاج مساعدة إضافية، أخبرني! 😊
+- Update the repository URL and screenshot paths (`screenshots/portrait.png`, `screenshots/landscape.png`) as needed.
+- Add more details if there are additional features or dependencies.
