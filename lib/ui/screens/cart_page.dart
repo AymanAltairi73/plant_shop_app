@@ -1,9 +1,11 @@
 /// The `CartPage` class in a Flutter app displays a list of plants added to the cart with quantity
 /// controls and calculates the total price.
 library;
+
 import 'package:flutter/material.dart';
 import 'package:plant_shop_app/constants.dart';
 import 'package:plant_shop_app/models/plants.dart';
+import 'package:plant_shop_app/ui/screens/payment_screen.dart';
 import 'package:plant_shop_app/ui/screens/widgets/plant_widget.dart';
 
 class CartPage extends StatefulWidget {
@@ -13,9 +15,11 @@ class CartPage extends StatefulWidget {
   @override
   State<CartPage> createState() => _CartPageState();
 }
+
 class _CartPageState extends State<CartPage> {
   double getTotalPrice() {
-    return widget.addedToCartPlants.fold(0, (sum, item) => sum + (item.price * item.quantity));
+    return widget.addedToCartPlants
+        .fold(0, (sum, item) => sum + (item.price * item.quantity));
   }
 
   @override
@@ -72,9 +76,7 @@ class _CartPageState extends State<CartPage> {
                     children: [
                       Expanded(
                         child: PlantWidget(
-                          index: index,
-                          plantList: widget.addedToCartPlants
-                        ),
+                            index: index, plantList: widget.addedToCartPlants),
                       ),
                       Container(
                         padding: const EdgeInsets.all(8),
@@ -85,7 +87,8 @@ class _CartPageState extends State<CartPage> {
                                   color: Constants.primaryColor),
                               onPressed: () {
                                 setState(() {
-                                  if (widget.addedToCartPlants[index].quantity > 1) {
+                                  if (widget.addedToCartPlants[index].quantity >
+                                      1) {
                                     widget.addedToCartPlants[index].quantity--;
                                   }
                                 });
@@ -107,6 +110,14 @@ class _CartPageState extends State<CartPage> {
                                 });
                               },
                             ),
+                            IconButton(
+                                onPressed: () {
+                                  setState(() {
+                                    widget.addedToCartPlants.removeAt(index);
+                                  });
+                                },
+                                icon: const Icon(Icons.delete,
+                                    color: Colors.redAccent)),
                           ],
                         ),
                       ),
@@ -141,6 +152,35 @@ class _CartPageState extends State<CartPage> {
               ),
             ],
           ),
+          const SizedBox(height: 16),
+          ElevatedButton(
+            onPressed: widget.addedToCartPlants.isEmpty
+                ? null
+                : () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => PaymentScreen(
+                            cartItems: widget.addedToCartPlants,
+                            totalPrice: getTotalPrice()),
+                      ),
+                    );
+                  },
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Constants.primaryColor,
+              minimumSize: const Size(double.infinity, 50),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(25),
+              ),
+            ),
+            child: const Text(
+              'Proceed to Payment',
+              style: TextStyle(
+                  fontSize: 18,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold),
+            ),
+          )
         ],
       ),
     );
