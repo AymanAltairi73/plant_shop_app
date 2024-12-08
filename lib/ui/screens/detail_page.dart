@@ -1,10 +1,9 @@
-/// The DetailPage class in this Dart code represents a screen displaying detailed information about a
-/// plant, including features, price, and options to add to cart or buy.
-library;
 import 'package:flutter/material.dart';
 import 'package:plant_shop_app/constants.dart';
 import 'package:plant_shop_app/models/plants.dart';
 import 'package:plant_shop_app/ui/screens/payment_screen.dart';
+/// The DetailPage class in this Dart code represents a screen displaying detailed information about a
+/// plant, including features, price, and options to add to cart or buy.
 
 class DetailPage extends StatefulWidget {
   final int plantId;
